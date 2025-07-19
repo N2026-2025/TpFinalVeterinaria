@@ -1,15 +1,18 @@
-import React from 'react'; // Importa React para usar JSX y definir componentes
-import Form from './components/Form'; // Importa el componente Form desde el archivo correspondiente
-// import CoursesList from './components/CoursesList'; // Importa el componente CoursesList desde el archivo correspondiente
-import './App.css'; // Importa el archivo de estilos CSS para aplicar estilos al componente App
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+import Dashboard from './Dashboard';
 
-// Define el componente funcional App
 function App() {
-    return (
-        <div className="App"> {/* Aplicar estilos CSS al contenedor principal */}
-            <Form /> {/* Renderiza el componente Form */}
-        </div>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/registro" element={<Register />} />
+        <Route path="/panel" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App; // Exporta el componente App para que pueda ser utilizado en otros archivos de la aplicación
+export default App;
