@@ -39,7 +39,7 @@ function Login() {
   return (
     <div className="login-container">
       <header className="login-header">
-        <img src="/logo.png" alt="Logo" className="logo" />
+        <img src="../public/logopetcare.png" alt="Logo" className="logo" />
         <h1>Iniciar Sesión</h1>
       </header>
 
