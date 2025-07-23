@@ -1,0 +1,10 @@
+Copyright (c) 2025 Equipo de creadores de App
+
+Todos los derechos reservados.
+
+Este software es propiedad de los creadores de PetCare.  
+Queda prohibido su uso, copia, modificación, redistribución o ingeniería inversa sin autorización expresa y por escrito.
+
+Este software solo puede ser utilizado internamente por los miembros del equipo autorizado.
+
+Para consultas o solicitudes de licencia, contactarse a: [correo electrónico o sitio web].

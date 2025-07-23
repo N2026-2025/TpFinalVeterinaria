@@ -1,0 +1,10 @@
+[
+  {
+    "Nombre": "Firulais",
+    "Especie": "Perro",
+    "Genero": "Macho",
+    "Chip_N": 12345,
+    "Senas_Particulares": 70000.0,
+    "Fecha_de_Nacimiento": "2025-08-23"
+  }
+]

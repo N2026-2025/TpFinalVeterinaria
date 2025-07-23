@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Turno Veterinaria</title>
+</head>
+<body>
+
+  <h1>Consulta de turno</h1>
+  <button onclick="mostrarTurno()">Ver turno</button>
+
+  <script>
+    async function mostrarTurno() {
+      try {
+        const respuesta = await fetch('http://localhost:3306/motivo'); // ajustá puerto si es necesario
+        if (!respuesta.ok) throw new Error("Error al obtener turno");
+        
+        const data = await respuesta.json();
+        const mensaje = `Tu turno es el ${data.dia} a las ${data.hora} en ${data.lugar}.`;
+        alert(mensaje);
+      } catch (error) {
+        console.error('Error:', error);
+        alert('No se pudo obtener el turno.');
+      }
+    }
+  </script>
+
+</body>
+</html>

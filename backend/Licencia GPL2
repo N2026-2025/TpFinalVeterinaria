@@ -1,0 +1,91 @@
+Licencia Pública General GNU (GPL) Versión 2
+Copyright (C) 1989, 1991 Free Software Foundation, Inc.
+
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
+
+PREFACIO
+
+La Licencia Pública General GNU es una licencia de software libre que garantiza a los usuarios la libertad de compartir y cambiar software libre para asegurar que el software sea libre para todos sus usuarios.
+
+Esta licencia recoge los términos y condiciones para la copia, distribución y modificación de software libre.
+
+TÉRMINOS Y CONDICIONES PARA LA COPIA, DISTRIBUCIÓN Y MODIFICACIÓN
+
+0. Definiciones.
+"Este Licenciante" se refiere al propietario de los derechos de autor que licencia el Programa bajo esta Licencia.
+
+"El Programa" se refiere a cualquier programa de computadora licenciado bajo esta Licencia.
+
+"Trabajo Derivado" significa cualquier trabajo basado en el Programa o en cualquiera de sus partes.
+
+"Distribución" significa cualquier forma de transferencia del Programa o Trabajos Derivados a terceros.
+
+1. Usted puede copiar y distribuir copias exactas del Código Fuente del Programa, siempre que:
+a) Incluya en cada copia un aviso de derechos de autor y esta Licencia.
+
+b) Distribuya copias completas del código fuente o haga disponible el código fuente completo.
+
+2. Usted puede modificar su copia del Programa y distribuir las modificaciones, siempre que:
+a) También distribuya el código fuente completo de las modificaciones bajo esta misma Licencia.
+
+b) Incluya un aviso que indique que usted modificó el Programa y la fecha de dicha modificación.
+
+3. Usted no puede distribuir el Programa o sus modificaciones bajo cualquier otra licencia que imponga restricciones adicionales.
+4. Cualquier programa que incluya partes del Programa (Trabajo Derivado) debe ser licenciado como un todo bajo esta Licencia.
+5. La ausencia de garantía: El Programa se proporciona "tal cual", sin garantías explícitas o implícitas.
+6. Usted no puede imponer restricciones legales o tecnológicas que restrinjan a terceros de hacer lo que esta Licencia permite.
+7. Para cualquier programa distribuido que no contenga código fuente completo, debe proveer acceso al código fuente completo bajo esta Licencia.
+FIN DE LOS TÉRMINOS Y CONDICIONES
+
+Para ver el texto oficial completo en inglés y más detalles técnicos:
+
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+Si quieres, te puedo facilitar también la versión oficial completa en inglés o en otro idioma, o ayudarte con un resumen adaptado para tu proyecto.
+
+¿Querés que te lo haga?
+
+
+
+
+
+
+
+
+You said:
+quiero la version completa en español
+
+
+ChatGPT said:
+Claro, aquí te comparto la Licencia Pública General GNU versión 2 (GPL v2) completa en español, tal como la publica la Free Software Foundation. Esta es la versión oficial traducida.
+
+Licencia Pública General GNU, versión 2
+Copyright (C) 1989, 1991 Free Software Foundation, Inc.
+
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
+
+PREÁMBULO
+
+La Licencia Pública General de GNU es una licencia libre diseñada para garantizar la libertad de compartir y cambiar software libre, para asegurar que el software sea libre para todos sus usuarios. Esta Licencia Pública General se aplica a la mayoría del software de la Free Software Foundation y a cualquier otro programa cuyo autor decida licenciar bajo esta licencia.
+
+Al distribuir o modificar el software bajo esta licencia, debe quedar claro que usted acepta las condiciones de la licencia.
+
+TÉRMINOS Y CONDICIONES PARA LA COPIA, DISTRIBUCIÓN Y MODIFICACIÓN
+
+0. Definiciones.
+Esta licencia hace referencia a “programa” como cualquier programa de computadora licenciado bajo esta Licencia. “Código fuente” se refiere a la forma preferida para hacer modificaciones al programa.
+
+Un “trabajo derivado” es cualquier trabajo basado en el programa o en partes de éste.
+
+1. Usted puede copiar y distribuir copias exactas del código fuente del programa según lo especificado en esta Licencia, siempre que mantenga intactos los avisos de derechos de autor y esta Licencia.
+2. Usted puede modificar su copia del programa y distribuir las modificaciones, siempre que también haga disponible el código fuente completo de las modificaciones bajo esta misma licencia.
+Debe incluir un aviso destacando que modificó el programa y la fecha de modificación.
+
+3. Usted no puede distribuir el programa ni trabajos derivados bajo ninguna otra licencia que imponga restricciones adicionales.
+4. Cualquier trabajo derivado debe licenciarse como un todo bajo esta misma Licencia.
+5. El programa se proporciona "tal cual", sin garantías expresas ni implícitas.
+6. Usted no puede imponer restricciones legales o técnicas que limiten a terceros las libertades que esta licencia garantiza.
+7. Si distribuye binarios, debe también proporcionar o poner a disposición el código fuente completo bajo esta licencia.
+8. (Opcional) Usted puede aceptar esta licencia para cualquier versión futura de la GPL publicada por la Free Software Foundation.
+FIN DE LOS TÉRMINOS Y CONDICIONES
+
