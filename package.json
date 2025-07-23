@@ -1,0 +1,20 @@
+{
+  "name": "tp-petcare-full",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && node server.js",
+    "build": "react-scripts build && npm run build",
+    "client": "cd frontend && npm start && npm run dev"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "morgan": "^1.10.0",
+    "react-router-dom": "^7.6.3",
+    "sweetalert2": "^11.22.2"
+  },
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "nodemon": "^3.1.10"
+  }
+}

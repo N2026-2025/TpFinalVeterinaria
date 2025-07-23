@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel - Pet Care</title>
+  <link rel="stylesheet" href="../CSS/panel.css" />
+</head>
+<body>
+  <div class="panel-container">
+    <div class="logo">
+      <img src="../../Imagenes/logopetcare2.png" alt="Logo appPet">
+    </div>
+    <h1 class="app-title">Panel de Usuario</h1>
+
+    <div class="user-info">
+      <p><strong>Nombre:</strong> <span id="nombreCompleto"></span></p>
+      <p><strong>Correo:</strong> <span id="correo"></span></p>
+      <p><strong>Usuario:</strong> <span id="usuario"></span></p>
+    </div>
+
+    <button class="logout-button" id="cerrarSesion">Cerrar sesión</button>
+
+    <form id="form-tarea" class="form-tarea">
+      <input type="text" id="tituloTarea" placeholder="Ej: Turno con el veterinario" required />
+      <input type="date" id="fechaTarea" required />
+      <select id="tipoTarea" required>
+        <option value="">Seleccionar tipo</option>
+        <option value="turno">Turno</option>
+        <option value="vacuna">Vacunación</option>
+        <option value="peluqueria">Peluquería</option>
+      </select>
+      <button type="submit">Agregar tarea</button>
+    </form>
+
+    <div class="tareas-section">
+      <h2>Turnos</h2>
+      <ul id="turno-tareas" class="lista-tareas"></ul>
+
+      <h2>Vacunas</h2>
+      <ul id="vacuna-tareas" class="lista-tareas"></ul>
+
+      <h2>Peluquería</h2>
+      <ul id="peluqueria-tareas" class="lista-tareas"></ul>
+    </div>
+  </div>
+
+  <ul class="background-circles">
+    <li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li>
+  </ul>
+
+  <script src="../JS/panel.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ficha Mascota - Pet Care</title>
+  <link rel="stylesheet" href="PagInicio.css" />
+  <script src="PagInicio.js"></script>
+</head>
+<body>
+  <div class="panel-container">
+    <div class="pet-header">
+      <img src="descarga (1).jpeg" alt="Foto de mascota" class="pet-photo" />
+      <div class="pet-info">
+        <div class="pet-id">2000 50091 07 1256</div>
+        <div class="pet-name">NOMBRE <strong>BELL</strong></div>
+        <div class="pet-details">
+          <span>ESPECIE <strong>HAMSTER</strong></span>
+          <span>RAZA <strong>-</strong></span>
+          <span>EDAD <strong>1</strong></span>
+          <span>SEXO <strong>H</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>VACUNAS (6)</h3>
+      <ul class="list" id="vacunas-list">
+        <li><span>2023-06-18</span> DESPARASITANTE</li>
+        <li><span>2023-05-14</span> DESPARASITANTE</li>
+        <li><span>2023-03-09</span> VITAMINA B12</li>
+      </ul>
+      <button onclick="abrirModal('vacunas')">+ Añadir Vacuna</button>
+    </div>
+
+    <div class="section">
+      <h3>ATENCIONES (3)</h3>
+      <ul class="list" id="atenciones-list">
+        <li><span>2023-06-18</span> CONTROL BIMESTRAL</li>
+        <li><span>2023-04-10</span> DESPARASITACIÓN</li>
+      </ul>
+      <button onclick="abrirModal('atenciones')">+ Añadir Atención</button>
+    </div>
+
+    <div class="section2">
+      <h3>TURNOS (2)</h3>
+      <ul class="list" id="turnos-list">
+        <li><span>2023-08-20</span> VACUNA ANUAL</li>
+        <li><span>2023-10-05</span> CONTROL</li>
+      </ul>
+      <button onclick="abrirModal('turnos')">+ Añadir Turno</button>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Agregar entrada</h3>
+      <input type="date" id="fecha" />
+      <input type="text" id="descripcion" placeholder="Descripción" />
+      <div class="modal-actions">
+        <button onclick="guardarEntrada()">Guardar</button>
+        <button onclick="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="funciones.js"></script>
+</body>
+</html>
