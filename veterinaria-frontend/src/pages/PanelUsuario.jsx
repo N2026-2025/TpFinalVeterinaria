@@ -72,42 +72,62 @@ const PanelUsuario = () => {
     console.log('📤 Enviando animal al backend:', nuevoAnimal);
   };
 
-  const handleSubmitTarea = async (e) => {
-    e.preventDefault();
+const handleSubmitTarea = async (e) => {
+  e.preventDefault();
 
-    const nuevaTarea = {
-      Animal_ID: formData.Animal_ID,
-      tipo: formData.tipo,
-      descripcion: formData.titulo,
-      fecha: formData.fecha,
-      id: Date.now(),
-    };
+  // Verifica que todos los datos estén presentes
+  if (!formData.Animal_ID || !formData.tipo || !formData.fecha) {
+    alert('Faltan datos: Animal_ID, tipo o fecha');
+    return;
+  }
 
-    setTareas((prevTareas) => {
-      const actualizadas = [...prevTareas, nuevaTarea];
-      localStorage.setItem('tareas', JSON.stringify(actualizadas));
-      return actualizadas;
-    });
-
-    try {
-      const response = await fetch('http://localhost:3001/api/tareas', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(nuevaTarea),
-      });
-      const data = await response.json();
-      console.log('Tarea guardada en backend:', data);
-    } catch (error) {
-      console.error('Error al guardar tarea en backend:', error);
-    }
-
-    setFormData({
-      ...formData,
-      titulo: '',
-      fecha: '',
-      tipo: ''
-    });
+  const tareaParaLocalStorage = {
+    Animal_ID: formData.Animal_ID,
+    tipo: formData.tipo,
+    titulo: formData.titulo,
+    fecha: formData.fecha,
+    id: Date.now(),
   };
+
+  setTareas((prevTareas) => {
+    const actualizadas = [...prevTareas, tareaParaLocalStorage];
+    localStorage.setItem('tareas', JSON.stringify(actualizadas));
+    return actualizadas;
+  });
+
+  // Esta es la única estructura que acepta el backend
+  const tareaParaBackend = {
+    Animal_ID: formData.Animal_ID,  
+    tipo: formData.tipo,
+    fecha: formData.fecha
+  };
+
+  try {
+    const response = await fetch('http://localhost:3001/api/tareas', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(tareaParaBackend),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      console.log('✅ Tarea guardada en backend:', data);
+    } else {
+      console.warn('⚠️ Error del backend:', data);
+    }
+  } catch (error) {
+    console.error('❌ Error al guardar tarea en backend:', error);
+  }
+
+  setFormData({
+    ...formData,
+    titulo: '',
+    fecha: '',
+    tipo: '',
+    Animal_ID: ''
+  });
+};
+
 
   const eliminarTarea = (id) => {
     const filtradas = tareas.filter(t => t.id !== id);
@@ -134,24 +154,26 @@ const PanelUsuario = () => {
 
       <form onSubmit={handleSubmitTarea} className="form-tarea">
         <input type="text" id="titulo" placeholder="Ej: Turno con el veterinario" value={formData.titulo} onChange={handleInputChange} required />
+<input type="number"id="Animal_ID"placeholder="ID del animal"value={formData.Animal_ID} onChange={handleInputChange} required/>
+
         <input type="date" id="fecha" value={formData.fecha} onChange={handleInputChange} required />
         <select id="tipo" value={formData.tipo} onChange={handleInputChange} required>
         <option value="">Seleccionar tipo</option>
         <option value="turno">Control</option>
-        <option value="quirofano">Quirófano</option>
-        <option value="vacuna">Vacunación</option>
-        <option value="peluqueria">Peluquería</option>
+        <option value="quirofano">Quirofano</option>
+        <option value="vacunacion">Vacunacion</option>
+        <option value="peluqueria">Peluqueria</option>
         </select>
         <button type="submit">Agregar tarea</button>
       </form>
 
-{['turno', 'quirofano', 'vacuna', 'peluqueria'].map(tipo => (
+{['turno', 'quirofano', 'vacunacion', 'peluqueria'].map(tipo => (
 <div key={tipo}>
 <h2>{tipo.charAt(0).toUpperCase() + tipo.slice(1)}s</h2>
 <ul className="lista-tareas">
       {tareasPorTipo(tipo).map(t => (
 <li key={t.id}>
-          {t.descripcion} - {t.fecha}
+          {t.titulo} - {t.fecha}
 <button className="delete-button" onClick={() => eliminarTarea(t.id)}>🗑️</button>
 </li>
       ))}
@@ -172,7 +194,6 @@ const PanelUsuario = () => {
       </form>
 
 
-
       <ul className="background-circles">
         {Array.from({ length: 10 }).map((_, i) => <li key={i}></li>)}
       </ul>
@@ -182,3 +203,4 @@ const PanelUsuario = () => {
 
 
 export default PanelUsuario;
+
